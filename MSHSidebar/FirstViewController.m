@@ -27,31 +27,6 @@
 }
 
 
-float oldX, oldY;
-BOOL dragging;
-
--(void) touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
-    dragging = YES;
-    
-    UITouch* touch = [[event allTouches] anyObject];
-    CGPoint touchPoint = [touch locationInView:self.view];
-    
-        oldX = touchPoint.x;
-        oldY = touchPoint.y;
-
-}
-
--(void) touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event{
-    UITouch* touch = [[event allTouches] anyObject];
-    CGPoint touchPoint = [touch locationInView:self.view];
-    CGRect movingFrame = self.view.frame;
-    //movingFrame.origin.x =
-}
--(void) touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event{
-    dragging = NO;
-}
-
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     
